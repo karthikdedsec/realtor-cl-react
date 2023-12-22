@@ -3,8 +3,9 @@ import { useLocation, useNavigate } from "react-router-dom";
 export default function Header() {
   const navigate = useNavigate();
   const location = useLocation();
-  const pathMatchRoute = (route) => {
-    if (route === location.pathname) {
+
+  const pathStyleChange = (source) => {
+    if (source === location.pathname) {
       return true;
     }
   };
@@ -27,7 +28,7 @@ export default function Header() {
           <ul className="flex space-x-10">
             <li
               className={`cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${
-                pathMatchRoute("/") && "text-black border-b-red-500"
+                pathStyleChange("/") && "!text-black !border-b-red-500"
               }`}
               onClick={() => navigate("/")}
             >
@@ -35,15 +36,15 @@ export default function Header() {
             </li>
             <li
               className={`cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${
-                pathMatchRoute("/offers") && "text-black border-b-red-500"
-              }`}
+                pathStyleChange("/offers") && "!text-black !border-b-red-500"
+              } `}
               onClick={() => navigate("/offers")}
             >
               Offers
             </li>
             <li
               className={`cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${
-                pathMatchRoute("/sign-in") && "text-black border-b-red-500"
+                pathStyleChange("/sign-in") && "!text-black !border-b-red-500"
               }`}
               onClick={() => navigate("/sign-in")}
             >
