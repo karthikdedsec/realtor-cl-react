@@ -39,28 +39,30 @@ export default function Header() {
           />
         </div>
         <div>
-          <ul className="flex space-x-10">
+          <ul className="flex gap-1 space-x-1">
             <li
-              className={`cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${
-                pathStyleChange("/") && "!text-black !border-b-red-500"
+              className={`transition duration-300 ease-in-out hover:text-black px-4 cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${
+                pathStyleChange("/") && "!text-black !bg-gray-200 rounded"
               }`}
               onClick={() => navigate("/")}
             >
               Home
             </li>
             <li
-              className={`cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${
-                pathStyleChange("/offers") && "!text-black !border-b-red-500"
+              className={`transition duration-300 ease-in-out hover:text-black px-4 cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${
+                pathStyleChange("/offers") &&
+                "!text-black !bg-gray-200 rounded "
               } `}
               onClick={() => navigate("/offers")}
             >
               Offers
             </li>
             <li
-              className={`cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${
+              className={`transition duration-300 ease-in-out hover:text-black px-4 cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${
                 (pathStyleChange("/sign-in") &&
-                  "!text-black !border-b-red-500") ||
-                (pathStyleChange("/profile") && "!text-black !border-b-red-500")
+                  "!text-black !bg-gray-200 rounded") ||
+                (pathStyleChange("/profile") &&
+                  "!text-black !bg-gray-200 rounded")
               }`}
               onClick={() => navigate("/profile")}
             >

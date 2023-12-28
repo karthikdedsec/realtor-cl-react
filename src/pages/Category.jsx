@@ -77,7 +77,7 @@ export default function Category() {
   };
   return (
     <div className="max-w-6xl mx-auto px-3">
-      <h1 className="text-3xl text-center mt-6 font-bold mb-6">
+      <h1 className="text-3xl text-center mt-6 font-sen mb-6">
         {params.categoryName === "rent" ? "Places for Rent" : "Places for Sale"}
       </h1>
       {loading ? (
