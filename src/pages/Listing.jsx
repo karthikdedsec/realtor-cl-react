@@ -111,7 +111,7 @@ export default function Listing() {
             <span className="font-semibold">Description - </span>
             {listing.description}
           </p>
-          <ul className="flex items-center space-x-2 sm:space-x-10 text-sm font-semibold mb-6">
+          <ul className="flex items-center space-x-2 sm:space-x-10 text-sm font-semibold mb-6 flex-wrap ">
             <li className="flex items-center whitespace-nowrap">
               <IoBed className="text-lg mr-1" />
               {+listing.bedrooms > 1 ? `${listing.bedrooms} Beds` : "1 Bed"}
